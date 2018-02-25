@@ -8,14 +8,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client ) => {
   const db = client.db('TodoApp');
   console.log('Connected to MongoDB server.');
 
-  db.collection('Todos').find({
-    completed: false
-  }).toArray().then((docs) => {
-    console.log('Todos');
-    console.log(JSON.stringify(docs, undefined, 2));
-  }, (err) => {
-    console.log('Unable to fetch todos', err);
-  });
+  //delete many
+  // db.collection('Todos').deleteMany({text: 'Eat lunch'}).then((result) => {
+  //   console.log(result);
+  // });
+
+  //deleteone
+
+  //findone and deleteone
+
 
   // client.close();
 });
